@@ -1,16 +1,15 @@
 {
-  "name": "lab-01",
+  "name": "lab-02",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "start": "main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Gabriel Boroghina",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "moment": "^2.24.0"
+    "express": "^4.17.1"
   }
 }
