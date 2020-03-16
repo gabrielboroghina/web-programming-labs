@@ -1,4 +1,6 @@
 const express = require('express');
+const {authorizeAndExtractToken} = require("../security/Jwt/index");
+const {authorizeRoles} = require('../security/Roles/index');
 
 const AuthorsService = require('./services.js');
 const {
@@ -10,7 +12,7 @@ const {
 
 const router = express.Router();
 
-router.post('/', async (req, res, next) => {
+router.post('/', authorizeAndExtractToken, authorizeRoles('admin'), async (req, res, next) => {
     const {
         first_name,
         last_name
@@ -41,7 +43,7 @@ router.post('/', async (req, res, next) => {
     }
 });
 
-router.get('/', async (req, res, next) => {
+router.get('/', authorizeAndExtractToken, authorizeRoles('admin', 'user'), async (req, res, next) => {
     try {
 
         const authors = await AuthorsService.getAll();
@@ -52,7 +54,7 @@ router.get('/', async (req, res, next) => {
     }
 });
 
-router.get('/:id', async (req, res, next) => {
+router.get('/:id', authorizeAndExtractToken, authorizeRoles('admin', 'user'), async (req, res, next) => {
     const {
         id
     } = req.params;
@@ -72,7 +74,7 @@ router.get('/:id', async (req, res, next) => {
     }
 });
 
-router.put('/:id', async (req, res, next) => {
+router.put('/:id', authorizeAndExtractToken, authorizeRoles('admin'), async (req, res, next) => {
     const {
         id
     } = req.params;
@@ -107,7 +109,7 @@ router.put('/:id', async (req, res, next) => {
     }
 });
 
-router.delete('/:id', async (req, res, next) => {
+router.delete('/:id', authorizeAndExtractToken, authorizeRoles('admin'), async (req, res, next) => {
     const {
         id
     } = req.params;
