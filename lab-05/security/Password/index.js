@@ -4,8 +4,7 @@ const bcryptjs = require('bcryptjs');
 const hash = async (plainTextPassword) => {
     const salt = await bcryptjs.genSalt(5);
     const hash = await bcryptjs.hash(plainTextPassword, salt);
-    return hash
-
+    return hash;
 };
 
 // va trebui sa folositi compare atunci cand primiti cerere de autentificare

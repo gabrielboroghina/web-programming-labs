@@ -74,7 +74,7 @@ router.get('/', async (req, res, next) => {
     res.json(await UsersService.getUsers());
 });
 
-router.post('/authentication', async (req, res, next) => {
+router.post('/login', async (req, res, next) => {
     const {
         username,
         password
