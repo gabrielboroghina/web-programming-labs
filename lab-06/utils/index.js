@@ -40,6 +40,12 @@ const validateFields = (fields) => {
                     throw new ServerError(`Campul ${fieldName} trebuie sa fie jwt`, 400);
                 }
                 break;
+            case 'string-list':
+                const fieldVal = fields[fieldName].value;
+                if (!(Array.isArray(fieldVal) && fieldVal.every(elem => validator.isAlpha(elem)))) {
+                    throw new ServerError(`Campul ${fieldName} trebuie sa fie o lista de string-uri`, 400);
+                }
+                break;
         }
     }
 }
