@@ -1,0 +1,103 @@
+#container {
+    width: 800px;
+    background-color: lightblue;
+    padding-top: 20px;
+}
+
+#header {
+    background-color: green;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+#content {
+    background-color: orange;
+    padding: 10px 5px 10px 5px;
+    display: flex;
+    color: whitesmoke;
+}
+
+#main {
+    background-color: blue;
+    width: 600px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+
+    font-family: 'Courgette', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+}
+
+#main.p {
+    text-align: justify-all;
+}
+
+.small-text {
+    font-size: 14px;
+}
+
+#nav {
+    background-color: purple;
+    width: 180px;
+    margin-left: 10px;
+
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: gray;
+}
+
+table tr:nth-child(odd) {
+    background-color: green;
+}
+
+td {
+    padding: 5px 10px 5px 10px;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+#form {
+    background-color: grey;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-top: 20px;
+
+    font-family: 'Abel', sans-serif;
+}
+
+#form textarea {
+    width: 300px;
+    height: 100px;
+}
+
+#footer {
+    background-color: black;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 20px;
+
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    color: bisque;
+}
+
+img, video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
