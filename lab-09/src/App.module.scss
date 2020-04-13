@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+$width: 50%;
+
+.layout {
+  margin-left: 40px;
+  text-align: center;
+}
+
+.counter {
+  width: $width;
+
+  background-color: burlywood;
+  border-radius: 3px;
+  padding: 30px 0;
+  margin: 20px 0;
+}
+
+.header {
+  width: $width;
+  height: 200px;
+
+  background-image: url("https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4qNzl?ver=b985");
+  background-size: 100% 100%;
+}
+
+.nav {
+  width: $width;
+  height: 80px;
+  margin-top: 20px;
+
+  background-color: cornsilk;
+}
+
+.footer {
+  width: $width;
+
+  background-color: darkslategrey;
+  color: white;
+}
+
+.navitem {
+  padding: 5px 8px;
+  margin: 0 5px;
+
+  background-color: khaki;
+  border-radius: 2px;
+  color: black;
+  text-decoration: none;
+}
+
+@mixin column {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.nav_left, .nav_right {
+  @include column;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
