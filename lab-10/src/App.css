@@ -1,0 +1,36 @@
+.App {
+    text-align: center;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+.panel {
+    background-color: #a4aa9b;
+
+    padding: 30px 40px;
+}
+
+.list {
+    background-color: blanchedalmond;
+
+    padding: 20px;
+}

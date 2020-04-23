@@ -30,7 +30,7 @@ const authenticate = async (username, password) => {
 
     const user = await Users.findOne({username});
     if (user === null) {
-        throw new ServerError(`Utilizatorul inregistrat cu ${username} nu exista!`, 404);
+        throw new ServerError(`Utilizatorul inregistrat cu ${username} nu exista!`, 401);
     }
 
     if (await compare(password, user.password)) {
@@ -39,10 +39,10 @@ const authenticate = async (username, password) => {
             userRole: user.role
         });
     }
-    throw new ServerError("Combinatia de username si parola nu este buna!", 404);
+    throw new ServerError("Combinatia de username si parola nu este buna!", 401);
 };
 
 module.exports = {
     add,
     authenticate
-}
+};

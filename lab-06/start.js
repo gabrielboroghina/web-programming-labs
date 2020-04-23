@@ -1,11 +1,13 @@
 const express = require('express');
 const morgan = require('morgan'); //middleware de logare
 const helmet = require('helmet'); //middleware de securitate
+const cors = require('cors');
 
 const routes = require('./routes');
 
 const app = express();
 
+app.use(cors());
 app.use(helmet());
 app.use(morgan(':remote-addr - :remote-user [:date[web]] ":method :url HTTP/:http-version" :status :res[content-length]'));
 app.use(express.json());
